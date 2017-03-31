@@ -17,9 +17,9 @@ const store = configureStore()
 ReactDom.render(
     <Provider store={store}>
         <Router history = { browserHistory }>
-            <Route path="/" component={ Demo } />
-            <Route path="/loadmore" component={ D_Loadmore } />
-            <Route path='/todolist' component={ D_TodoList } />
+            <Route path="/ui" component={ Demo } />
+            <Route path="/ui/loadmore" component={ D_Loadmore } />
+            <Route path='/ui/todolist' component={ D_TodoList } />
         </Router>
     </Provider>,
     document.getElementById('app')
