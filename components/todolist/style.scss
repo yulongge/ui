@@ -1,0 +1,16 @@
+@import 'scss/normalize';
+
+input {
+    border: 1px solid #999;
+    width: 70%;
+}
+a {
+    text-decoration: none;
+    //margin-left: 20px;
+}
+
+.addTodo {
+    border: 1px solid #ededed;
+    margin-left: 20px;
+    border-radius: 2px;
+}
