@@ -4,7 +4,7 @@ import ReactDom from 'react-dom'
 import Demo from './pages'
 import D_Loadmore from './pages/loadmore'
 import D_TodoList from './pages/todolist'
-import { browserHistory, Router, Route, Link } from 'react-router'
+import { browserHistory, Router, Route, Link, hashHistory } from 'react-router'
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
@@ -16,10 +16,10 @@ import configureStore from '../app/store/configureStore'
 const store = configureStore()
 ReactDom.render(
     <Provider store={store}>
-        <Router history = { browserHistory }>
-            <Route path="/ui" component={ Demo } />
-            <Route path="/ui/loadmore" component={ D_Loadmore } />
-            <Route path='/ui/todolist' component={ D_TodoList } />
+        <Router history = { hashHistory }>
+            <Route path="/" component={ Demo } />
+            <Route path="/loadmore" component={ D_Loadmore } />
+            <Route path='/todolist' component={ D_TodoList } />
         </Router>
     </Provider>,
     document.getElementById('app')
